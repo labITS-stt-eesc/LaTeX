@@ -1,0 +1,133 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Beymer, McLauchlan, Coifman, and Malik}{Beymer
+  et~al.}{1997}]{beymer1997real}
+Beymer, D., P.~McLauchlan, B.~Coifman, and J.~Malik (1997).
+\newblock A real-time computer vision system for measuring traffic parameters.
+\newblock In {\em Proceedings of IEEE computer society conference on computer
+  vision and pattern recognition}, pp.\  495--501. IEEE.
+
+\bibitem[\protect\citeauthoryear{CambridgeInColour}{CambridgeInColour}{2019}]{Cambridge2019}
+CambridgeInColour (2019).
+\newblock {\em Understanding Digital Image Interpolation}.
+\newblock Available at
+  \url{http://www.cambridgeincolour.com/tutorials/image-interpolation.htm}.
+
+\bibitem[\protect\citeauthoryear{Cavallaro, Steiger, and Ebrahimi}{Cavallaro
+  et~al.}{2005}]{cavallaro2005tracking}
+Cavallaro, A., O.~Steiger, and T.~Ebrahimi (2005).
+\newblock Tracking video objects in cluttered background.
+\newblock {\em IEEE transactions on circuits and systems for video
+  technology\/}~{\em 15\/}(4), 575--584.
+
+\bibitem[\protect\citeauthoryear{Coifman, Beymer, McLauchlan, and
+  Malik}{Coifman et~al.}{1998}]{coifman1998real}
+Coifman, B., D.~Beymer, P.~McLauchlan, and J.~Malik (1998).
+\newblock A real-time computer vision system for vehicle tracking and traffic
+  surveillance.
+\newblock {\em Transportation Research Part C: Emerging Technologies\/}~{\em
+  6\/}(4), 271--288.
+
+\bibitem[\protect\citeauthoryear{Collins, Liu, and Leordeanu}{Collins
+  et~al.}{2005}]{collins2005online}
+Collins, R.~T., Y.~Liu, and M.~Leordeanu (2005).
+\newblock Online selection of discriminative tracking features.
+\newblock {\em IEEE transactions on pattern analysis and machine
+  intelligence\/}~{\em 27\/}(10), 1631--1643.
+
+\bibitem[\protect\citeauthoryear{Cortes and Vapnik}{Cortes and
+  Vapnik}{1995}]{cortes1995support}
+Cortes, C. and V.~Vapnik (1995).
+\newblock Support-vector networks.
+\newblock {\em Machine learning\/}~{\em 20\/}(3), 273--297.
+
+\bibitem[\protect\citeauthoryear{Do and Woo}{Do and Woo}{2016}]{do2016multi}
+Do, V.~D. and D.-M. Woo (2016).
+\newblock Multi-resolution estimation of optical flow for vehicle tracking.
+\newblock {\em Contemporary Engineering Sciences\/}~{\em 9}, 843--851.
+
+\bibitem[\protect\citeauthoryear{Jazayeri, Cai, Zheng, and Tuceryan}{Jazayeri
+  et~al.}{2011}]{jazayeri2011vehicle}
+Jazayeri, A., H.~Cai, J.~Y. Zheng, and M.~Tuceryan (2011).
+\newblock Vehicle detection and tracking in car video based on motion model.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems\/}~{\em
+  12\/}(2), 583--595.
+
+\bibitem[\protect\citeauthoryear{Lin, Chan, Fu, Hsiao, Chuang, Huang, and
+  Lo}{Lin et~al.}{2012}]{lin2012integrating}
+Lin, B.-F., Y.-M. Chan, L.-C. Fu, P.-Y. Hsiao, L.-A. Chuang, S.-S. Huang, and
+  M.-F. Lo (2012).
+\newblock Integrating appearance and edge features for sedan vehicle detection
+  in the blind-spot area.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems\/}~{\em
+  13\/}(2), 737--747.
+
+\bibitem[\protect\citeauthoryear{Lowe}{Lowe}{2004}]{lowe2004distinctive}
+Lowe, D.~G. (2004).
+\newblock Distinctive image features from scale-invariant keypoints.
+\newblock {\em International journal of computer vision\/}~{\em 60\/}(2),
+  91--110.
+
+\bibitem[\protect\citeauthoryear{Lucas, Kanade, et~al.}{Lucas
+  et~al.}{1981}]{lucas1981iterative}
+Lucas, B.~D., T.~Kanade, et~al. (1981).
+\newblock An iterative image registration technique with an application to
+  stereo vision.
+
+\bibitem[\protect\citeauthoryear{Marcomini}{Marcomini}{2018}]{marcomini2018}
+Marcomini, L.~A. (2018).
+\newblock {\em Automatic Identification of Traffic Behavior Using Video
+  Images}.
+\newblock Ph.\ D. thesis, Universidade de São Paulo.
+
+\bibitem[\protect\citeauthoryear{OpenCV}{OpenCV}{2016}]{OpenCV2016}
+OpenCV (2016).
+\newblock {\em {Geometric Image Transformations}}.
+\newblock Available at
+  \url{https://docs.opencv.org/2.4/modules/imgproc/doc/geometric_transformations.html#resize}.
+
+\bibitem[\protect\citeauthoryear{OpenCV}{OpenCV}{2019}]{OpenCV2019}
+OpenCV (2019).
+\newblock {\em {Geometric Image Transformations}}.
+\newblock Available at \url{https://docs.opencv.org/2.4/}.
+
+\bibitem[\protect\citeauthoryear{Rumelhart, Hinton, and Williams}{Rumelhart
+  et~al.}{1985}]{rumelhart1985learning}
+Rumelhart, D.~E., G.~E. Hinton, and R.~J. Williams (1985).
+\newblock Learning internal representations by error propagation.
+\newblock Technical report, California Univ San Diego La Jolla Inst for
+  Cognitive Science.
+
+\bibitem[\protect\citeauthoryear{Sasson}{Sasson}{2007}]{Kodak2019}
+Sasson, S. (2007).
+\newblock {\em {We Had No Idea}}.
+\newblock Available at
+  \url{https://web.archive.org/web/20130121220935/http://pluggedin.kodak.com/pluggedin/post/?id=687843}.
+
+\bibitem[\protect\citeauthoryear{Saunier and Sayed}{Saunier and
+  Sayed}{2006}]{saunier2006feature}
+Saunier, N. and T.~Sayed (2006).
+\newblock A feature-based tracking algorithm for vehicles in intersections.
+\newblock In {\em The 3rd Canadian Conference on Computer and Robot Vision
+  (CRV'06)}, pp.\  59--59. IEEE.
+
+\bibitem[\protect\citeauthoryear{Shi and Tomasi}{Shi and
+  Tomasi}{1994}]{shi1993good}
+Shi, J. and C.~Tomasi (1994).
+\newblock Good features to track.
+\newblock {\em Computer Vision and Pattern Recognition\/}, 593--600.
+
+\bibitem[\protect\citeauthoryear{Shih and Zhong}{Shih and
+  Zhong}{2017}]{shih2017automated}
+Shih, F.~Y. and X.~Zhong (2017).
+\newblock Automated counting and tracking of vehicles.
+\newblock {\em International Journal of Pattern Recognition and Artificial
+  Intelligence\/}~{\em 31\/}(12), 1750038.
+
+\bibitem[\protect\citeauthoryear{Zivkovic}{Zivkovic}{2004}]{zivkovic2004improved}
+Zivkovic, Z. (2004).
+\newblock Improved adaptive gaussian mixture model for background subtraction.
+\newblock In {\em Proceedings of the 17th International Conference on Pattern
+  Recognition, 2004. ICPR 2004.}, Volume~2, pp.\  28--31. IEEE.
+
+\end{thebibliography}

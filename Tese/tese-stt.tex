@@ -1,0 +1,604 @@
+%% Exemplo de uso da versão da classe  _eesc-stt.cls_, uma adaptação 
+%% para o Programa de Engenharia de Transportes da EESC-USP
+%% da classe _eesc.cls_, do PPG-EEC da EESC, feita por Athila e Monaro.
+%% A classe _eesc.cls_ é uma customifsdffdsfzação da classe abntex2.cls, feita
+%% pelo abntex2 group (http://abntex2.googlecode.com/)
+%%
+%% Customização da classe eesc.cls feita por setti@sc.usp.br
+%% 
+%% ------------------------------------------------------------------------
+%% eesc-stt.cls: classe para elaboração de tese de doutorado, dissertação de
+%% mestrado e texto para qualificação (mestrado e doutorado) em conformidade com 
+%% a norma ABNT NBR 14724:2011, adequada às exigências da CPG-EESC, para o 
+%% Programa de Pós-Graduação em Engenharia de Transportes. 
+%% ------------------------------------------------------------------------
+
+\documentclass[qualimst]{eesc-stt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------------------------
+% Opções da classe eesc-stt.cls:
+% 	tesedr:     Formata documento para tese de doutorado
+%	qualidr:    Formata documento para qualificação de doutorado
+% 	dissertmst: Formata documento para dissertação de mestrado
+% 	qualimst:   Formata documento para qualificação de mestrado
+% ------------------------------------------------------------------------
+ 
+% Packages usados na classe eesc-stt.cls
+% Esses packages são definidos em abntex2.cls e eesc-stt (que não devem ser modificado sem mudar de nome)
+% A folha é A4 e as margens são definidas de acordo com a NBR 14724:2011
+
+%% ---
+%% Escolha da tipologia usada no documento
+%%
+%% (apenas fontes com símbolos matemáticos são listadas aqui)
+%% Nota: escolha apenas uma tipologia, apagando os % das linhas desejadas
+%% --- 
+ 
+% ---
+%
+% ---
+
+% ---
+% Definições da tipologia usada
+% (apenas fontes com símbolos matemáticos são listadas aqui)
+% Nota: escolha apenas uma tipologia, apagando os % das linhas desejadas
+% ---
+
+
+% Usa a fonte Latin Modern (versão ampliada de CM, a tradicional do LaTeX)
+%\usepackage{lmodern}			
+
+% Usa a fonte Charter para texto, Inconsolata para tt e Cabin para sans serif
+%\usepackage[scaled=.98,sups]{XCharter}% lining figures in math
+%\usepackage[scaled=1.04,varqu,varl]{zi4}% inconsolata typewriter
+%\usepackage[type1]{cabin}% sans serif
+%\usepackage[libertine,bigdelims,scaled=1.07]{newtxmath}
+
+
+% Usa a fonte Linux Libertine e Biolinum
+\usepackage[tt=true,sb=true]{libertine}
+\usepackage[libertine,bigdelims]{newtxmath}
+
+% Usa a fonte Bera (versão de Vera Serif}
+%\usepackage{bera}
+
+% Usa a fonte Vera Sans (sem serifa)
+%\usepackage{arev}
+
+
+% Usa a fonte Kerkis (versão de Bookman)
+%\usepackage{kmath,kerkis} %  Nessa ordem, kmath muda a fonte do texto
+
+% Usa a fonte Baskervald (versão de Baskerville, serifa), Linux Biolinum (sem serifa) e SourceCodePro (tt)
+%\usepackage[lf]{Baskervaldx} % lining figures
+%\usepackage{biolinum}% sans serif
+%\usepackage[regular,bold,light,scaled=.8785,lf]{sourcecodepro}
+%\usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Times
+%\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+%\renewcommand*\oldstylenums[1]{\textosf{#1}}
+
+% Usa a fonte Computer Bright (sem serifa)
+%\usepackage{cmbright}
+
+% Usa a font Stix (semelhante a Times New Roman)
+%\usepackage{stix}
+
+% Usa a fonte Utopia com o MathDesign
+%\usepackage[adobe-utopia]{mathdesign}
+ 
+% Usa a fonte URW Palladio (Palatino)
+%\usepackage[sc]{mathpazo}
+%%--
+%% Final da definição da tipologia
+%%--
+
+
+\usepackage{amsmath}
+
+%% ---
+%% Packages para processamento de componentes deste documento (tese-stt.tex)  
+%% ---
+\usepackage{cmap}				% Mapeia caracteres especiais, necessário para criar um searchable PDF
+%\usepackage{makeidx}            % Cria o indice remissivo (descomente se for usar um índice remissivo)
+ 	% para mais detalhes, estude makeindex.pdf, no CTAN
+\usepackage{hyperref}  			% Controla a formação do links no pdf e hyperlinks
+ 	% para mais detalhes, estude hyperref.sty, no CTAN
+\usepackage{lastpage}			% Usado para inserir a Ficha catalográfica no lugar certo (eesc.cls)
+%\usepackage{nomencl} 			% Cria a lista de simbolos (descomente se for usar lista de símbolos)
+ 	% para mais detalhes, estude nomencl.pdf, no CTAN
+\usepackage{graphicx}			% Usado para incluir os arquivos pdf com as figuras e gráficos
+ 	% veja exemplo de inclusão de figuras neste documento
+%% ---
+%% Final dos packages para processamento de componentes do texto  
+%% ---
+ 
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do modelo eesc.cls 
+% ---
+%\usepackage[printonlyused]{acronym}	% Cria lista de siglas (descomente se for usar lista de siglas)
+\usepackage[table]{xcolor}				% Facilita o uso de cores
+% --- fim dos pacotes adicionais do eesc.cls
+
+
+%
+% Pacote para geração de texto para encher linguiça (lorem ipsum)
+% Apague essas linhas quando estiver fazendo o arquivo da sua tese/dissertação
+\usepackage{lipsum}				       % para geração de dummy text
+
+ 
+
+% ---
+% Dados para a montagem da CAPA e da FOLHA DE ROSTO
+% ---
+%
+% \titulo - comando para entrar com o título em português e inglês
+% 			parâmetros são usados em diversos locais do documento
+% Uso: \titulo{Título em Português}{Title in English}
+
+\titulo{Dados online mudei}
+	   {Very long title in English, full of letters, taking a lot of space}
+%
+% \autor	comando para entrar com o nome do autor
+% 			parâmetros são usados em diversos locais do documento
+% Uso: \autor{Nome Completo do Autor}{Sobrenome, N.~M.}
+ 
+\autor{Quasímodo Affonso Barbalho Nogueira da Cunha}{Cunha, Q.~A.~B.~N.}
+%
+ 
+% \cidade	comando para entrar com o nome da cidade
+% 			parâmetro é usado em diversos locais do documento
+\local{São Carlos}
+
+% \data		comando para entrar com o ano da defesa
+\data{2014}
+
+% \areaconcentracao		comando para definir a área de concentração
+%						PPG-ET: 	Infraestrutura de Transportes ou 
+%									Planejamento e Operação de Sistemas de Transportes
+%
+\areaconcentracao{Planejamento e Operação de Sistemas de Transportes}
+
+% \orientador		comando para entrar com nome do orientador
+\orientador{Prof.~Dr.~José Reynaldo Setti}
+
+% \coorientador		comando para entrar com nome do coorientador (só doutorado na USP)
+\coorientador{Prof. Dr. Ing. Paulaner Delikatt Zömfflig}
+% ---
+
+%%------------
+%% Processamento do índice remissivo e da lista de siglas
+%%    Nota: como não é usual fazer índice remissivo e lista de siglas
+%%    no PPG-ET, as linhas e respectivos pacotes(\includepackage)
+%%	  para criação do índice remissivo e da LdeS foram comentadas
+%%------------
+ 	
+% ---
+% compila o indice remissivo (descomente essa linha e o package makeidx)
+% ---
+%\makeindex
+% ---
+
+	
+% ---
+% Compila a lista de abreviaturas e siglas 
+% ---
+%	Para construir as entradas da lista de abreviaturas, consulte
+%	a documentação do abnTeX2
+%
+% 	Descomente a linha a seguir para compilar a lista de siglas
+% ---
+%\makenomenclature
+% ---
+
+%-------
+% Inserção da ficha catalográfica no verso da folha de rosto
+%-------
+	%
+	% \inserirfichacatalografica	comando para inserir ficha catalográfica
+	% Uso: \inserirfichacatalografica{nomedoarquivo.pdf}
+	%
+	% Caso o comando \inserirfichacatalografica seja definido, a ficha catalográfica
+	% será inserida atrás da folha de rosto. Caso contrário a página será deixada em
+	% branco.
+	% Escaneie a ficha catalográfica da biblioteca num arquivo pdf
+	%
+	% CUIDADO: Esta opção deve ser preenchida antes do comando \maketitle
+	% ---
+%\inserirfichacatalografica{fichaCatalografica.pdf}
+% ---
+
+%-------
+% Inserção da folha de aprovação depois da folha de rosto
+% ------
+	%
+	% \inserirfolhaaprovacao	comando para inserir folha de aprovação
+	% Uso: \inserirfolhaaprovacao{nomedoarquivo.pdf}
+	%
+	% Caso o comando \inserirfolhaaprovacao seja definido, a a folha de aprovação
+	% será inserida. Além disso, conforme Resolução CoPGr 5890, as informações 
+	% de rodapé são inseridas apropriadamente na folha de rosto, informando que 
+	% esta versão é uma versão corrigida e que a versão de defesa está arquivada
+	% no SVPOSGR-EESC.
+	% Escaneie a folha de aprovação feita pela secretaria do PPG-ET num arquivo pdf
+	%
+	% CUIDADO: Esta opção deve ser preenchida antes do comando \maketitle
+% ---
+%\inserirfolhaaprovacao{folhaAprovacao.pdf}
+% ---
+
+
+%-----------------
+%	Design dos títulos dos capítulos
+%-----------------
+%
+% abntex2.cls e eesc.cls usam uma das alternativas do memoir.cls, sem dar chance  
+% de escolha para o usuário. O design escolhido é feio, na minha opinião.
+% O design dos títulos dos capítulos a seguir pode ser usado para substituir o
+% padrão do memoir.cls. É possível modificar a cor da caixa (ChapBlue) e da
+% fonte com o número do capítulo (ChapWhite) e a posição da caixa (à direita
+% ou à esquerda).
+% Se você não quiser usar esse design para os títulos dos capítulos e  
+% preferir usar o design do abntex2.cls, basta comentar a linha com o
+% comando \chapterstyle{...}
+%
+\definecolor{ChapWhite}{rgb}{1,1,1}					% Para trocar a cor, mude os valores de {1,1,1} (branco)
+\newcommand{\LargeFont}{% Needs a 'stretchable' font
+      \usefont{\encodingdefault}{\sfdefault}{b}{n}%
+      \fontsize{60}{80}\selectfont\color{ChapWhite}}
+\newsavebox{\ChpNumBox}
+\definecolor{ChapBlue}{rgb}{0.65,0.25,0.35}			% Para trocar a cor, mude os valores de {.65,.25,.35}
+\makeatletter
+\newcommand*{\thickhrulefill}{%
+  \color{ChapBlue}\leavevmode\leaders\hrule height 1\p@ \hfill \kern%  
+  \z@\color{black}}
+\newcommand*\BuildChpNum[2]{%
+  \begin{tabular}[t]{@{}c@{}}
+    \makebox[0pt][c]{#1\strut}  \\[.5ex]
+    \colorbox{ChapBlue}{%
+      \rule[-10em]{0pt}{0pt}%
+      \rule{1.3ex}{0pt}\color{black}#2\strut
+      \rule{0.15ex}{0pt}}%
+  \end{tabular}}
+%--
+% GreyBoxRight faz o título do capítulo ficar alinhado à esquerda
+%--
+\makechapterstyle{GrayBoxRight}{%
+  \renewcommand{\chapnamefont}{\large\sffamily\bfseries}
+  \renewcommand{\chapnumfont}{\LargeFont}
+  \renewcommand{\chaptitlefont}{\raggedleft\Huge\sffamily\bfseries}
+  \setlength{\beforechapskip}{20pt}
+  \setlength{\midchapskip}{26pt}
+  \setlength{\afterchapskip}{40pt}
+  \renewcommand{\printchaptername}{}
+  \renewcommand{\chapternamenum}{}
+  \renewcommand{\printchapternum}{%
+    \sbox{\ChpNumBox}{%
+      \BuildChpNum{\chapnamefont\@chapapp}%
+      {\chapnumfont\thechapter}}}
+  \renewcommand{\printchapternonum}{%
+    \sbox{\ChpNumBox}{%
+      \BuildChpNum{\chapnamefont\vphantom{\@chapapp}}%
+      {\chapnumfont\hphantom{\thechapter}}}}
+  \renewcommand{\afterchapternum}{}
+  \renewcommand{\printchaptertitle}[1]{%
+    \parbox[t]{\hsize-\wd\ChpNumBox-1em}{%
+      \vspace{\midchapskip}%
+      \thickhrulefill\par
+     		\chaptitlefont ##1}%
+    \hfill\usebox{\ChpNumBox} % põe a caixa na direita
+	}%
+}% fecha \makechapterstyle{GrayBoxRight}
+%--
+% GreyBoxLeft faz o título do capítulo ficar alinhado à esquerda
+%--
+\makechapterstyle{GrayBoxLeft}{%
+  \renewcommand{\chapnamefont}{\large\sffamily\bfseries}
+  \renewcommand{\chapnumfont}{\LargeFont}
+  \renewcommand{\chaptitlefont}{\raggedright\Huge\sffamily\bfseries}
+  \setlength{\beforechapskip}{20pt}
+  \setlength{\midchapskip}{26pt}
+  \setlength{\afterchapskip}{40pt}
+  \renewcommand{\printchaptername}{}
+  \renewcommand{\chapternamenum}{}
+  \renewcommand{\printchapternum}{%
+    \sbox{\ChpNumBox}{%
+      \BuildChpNum{\chapnamefont\@chapapp}%
+      {\chapnumfont\thechapter}}}
+  \renewcommand{\printchapternonum}{%
+    \sbox{\ChpNumBox}{%
+      \BuildChpNum{\chapnamefont\vphantom{\@chapapp}}%
+      {\chapnumfont\hphantom{\thechapter}}}}
+  \renewcommand{\afterchapternum}{}
+% --
+% caixa na direita e título e alinhado à esquerda
+% --
+  \renewcommand{\printchaptertitle}[1]{%
+    \usebox{\ChpNumBox}\hfill % linha original
+    \parbox[t]{\hsize-\wd\ChpNumBox-1em}{%
+      \vspace{\midchapskip}%
+      \thickhrulefill\par
+      \chaptitlefont ##1\par}}%
+}% fecha \makechapterstyle{GrayBoxLeft}
+%--
+% Final do design dos títulos dos capítulos
+%--
+ 	
+%--
+% Escolha do tipo de design dos títulos dos capítulos:
+% Opções:
+% GreyBoxLeft  - caixa na esquerda e texto alinhado à esquerda
+% GreyBoxRight - caixa na direita e texto alinhado à direita
+%--
+%	Comente a linha a seguir se for usar o design do abntex2.cls
+\chapterstyle{GrayBoxRight}
+
+%%------------
+%	Correção da numeração de tabelas, figuras e equações
+%
+%	abntex2.cls numera tabelas, figuras e equações, por definição
+%   como Figura 1 ao invés de Figura {chapternum}{fignum}.
+%	(deve ser por causa de alguma NBR imbecil)
+%	Para corrigir esse defeito, as linhas a seguir mudam a forma
+%	de numerar para a mais inteligente e usual em teses.
+%	Se você preferir seguir a ABNT ao pé da letra, comente as
+%   linhas a seguir
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+\counterwithin{equation}{chapter}
+
+%%-------------
+%	Definição do símbolo usado na lista itemize
+%   (se desejar manter o quadrado com sombra etc., comente ou apague as linhas a seguir
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{\footnotesize$\blacktriangleright$}
+\renewcommand{\labelitemiii}{$\circ$}
+\renewcommand{\labelitemiv}{$\triangleright$}
+
+% ----
+% Início do documento
+% ----
+
+\begin{document}
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+\pretextual
+
+% ---
+% AbnTeX2 redefine o comando \maketitle para que ele faça as seguintes tarefas:
+%	- elaboração da capa e do seu verso (em branco); 
+%	- elaboração da folha de rosto 
+%	- inserção do arquivo PDF com a ficha catalográfica (se existir), no verso da folha de rosto; e 
+%	- inserção da folha de aprovação (se existir).
+% ---
+\maketitle
+
+
+% ---
+%  Dedicatória
+% ---
+% \imprimirdedicatoria		comando para imprimir a dedicatória (opcional)
+% Uso: \imprimirdedicatoria{texto da dedicatória}
+% ---
+\imprimirdedicatoria{Use o comando \emph{\texttt{\textbackslash{}imprimirdedicatória\{...\}}}
+	para colocar sua dedicatória numa nova página. \\
+	Para quebrar a linha, use \emph{\texttt{\textbackslash\textbackslash}},
+	pois linhas em branco gerarão mensagens de erro.
+	Dedicatórias de mais de uma linha ficam ``feias'', já o texto é sempre centralizado, por definição.\\ 
+	\hspace*{1pt}\\
+	Ao meu avô, \\
+	À memória da minha avó, \\
+	Ao meu pai, \\ À minha adorada mãezinha, \\
+	E, finalmente, aos meu onze irmãos e irmãs.\\
+	Sem vocês, isso seria muito mais curto!
+}% ---
+
+% ---
+% Agradecimentos
+% ---
+\imprimiragradecimentos{
+Os agradecimentos são colocados usando-se o ambiente 
+\texttt{\textbackslash{}imprimiragradecimentos\{...\}}. 
+
+Como os agradecimentos são um capítulo sem numeração, é possível colocar mais de 
+um parágrafo de agradecimentos. Basta usar uma 
+linha em branco entre os blocos de texto e o próprio \LaTeX{} cuidará de 
+fazer a composição tipográfica correta.
+}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\imprimirepigrafe{
+	``É completamente incompreensível o interesse em torno deste\\ 
+	assunto depois de tantos milhares de anos de uso.''\\
+		\emph{(Millor Fernandes)}\\ \vspace{16pt} 
+	De acordo com os dicionários, epígrafe é ``fragmento de texto, citação curta,  
+	máxima etc., colocada em frontispício de livro, no início de uma narrativa, 
+	um capítulo etc.'' e serve de tema ao assunto, 
+	para resumir o sentido ou  ainda para situar a motivação da obra.\\ \vspace{16pt}
+	Use o ambiente 
+	\emph{\texttt{\textbackslash{}imprimirepigrafe\{...\}}} para colocar a 
+	epígrafe na sua tese ou dissertação. 	
+	Use \emph{\texttt{\textbackslash\textbackslash}}
+	para quebrar linhas, pois linhas em branco gerarão mensagens de erro.\\
+	Use \emph{\texttt{\textbackslash{}vspace\{16pt\}}} para dar espaço entre
+	parágrafos.
+}
+% ---
+
+% ---
+% RESUMO e ABSTRACT
+% ---
+
+% Resumo em português
+\begin{resumo}{Palavra-chave 1. Palavra-chave 2. Palavra-chave 3}
+     Use o ambiente \texttt{resumo} para inserir o resumo do trabalho. Este
+ 	 ambiente irá gerar uma página como esta, com a referência bibliográfica
+ 	 para citação, o texto do resumo e, ao final, as palavras-chaves.
+ 	 
+ 	 Para fornecer as palavras-chaves, inclua-as entre \texttt{\{} e \texttt{\}},
+ 	 logo após \verb|\begin{resumo}|.  Elas devem estar 
+ 	 separadas entre si por ponto, como em \\
+ 	 \hspace*{1em}\verb|\begin{resumo}{Palavra-chave 1. Palavra-chave 2}|\\
+ 	 \hspace*{2em}\verb|Blá, blá, blá...|\\
+ 	 \hspace*{1em}\verb|\end{resumo}|\\
+ 	 Não há ponto depois da última palavra-chave, pois o ambiente 
+ 	 \texttt{resumo} já o inclui automaticamente. Se houver um ponto depois
+ 	 da última palavra-chave, aparecerão dois pontos finais no seu documento,
+ 	 como em\\
+ 	 \hspace*{5em}\textcolor{red}{\textsf{\textbf{Palavras-chave}: Palavra1. Palavra2\textbf{..}}}\\ 
+ 	 Para entender melhor, consulte o arquivo usado para gerar este documento.
+ 	 
+ 	 No ambiente  \texttt{resumo}, pode-se usar linhas em branco para separar os parágrafos,
+ 	 pois o Resumo é um capítulo sem numeração. \vspace{-12pt}
+
+\end{resumo}
+
+% Resumo em inglês
+\begin{abstract}{Keyword 1. Keyword 2. Keyword 3}
+	To insert the abstract, use the \texttt{abstract} environment. A page like this,
+	starting with the bibliographic reference, followed by the text and by the list of
+	keywords will be created in the document.
+	
+	 Use  \texttt{abstract}  exactly the same way you would use \texttt{resumo}.
+	
+\end{abstract}
+% ---
+
+% ---
+% Inserir lista de figuras
+%
+% o comando \listailustracoes do abntext2 deve ser usado no lugar 
+% do comando \listoffigures do LaTeX
+% ---
+\listailustracoes
+% ---
+
+% ---
+% Inserir lista de tabelas
+%
+% o comando \listatabelas do abntext2 deve ser usado no lugar
+% do comando do LaTeX \listoftables
+% ---
+\listatabelas
+% ---
+
+% ---
+% Inserir lista de abreviaturas e siglas (opcional), 
+% descomente se for usar, incluindo linhas comentadas anteriormente
+% ---
+%\listasiglas{abrev/Abreviaturas}
+% ---
+
+% ---
+% Inserir o sumário (índice de matéria)
+%
+% abntext2 obriga o uso do comando \sumario no lugar do
+% comando LaTeX \tableofcontents
+% ---
+\sumario
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\mainmatter
+
+%-------
+% Use o comando \include para incluir os capítulos da tese/dissertação
+% cada arquivo será incluído numa nova página
+%
+%	Não use acentos ou cedilha ou espaços em branco nos nomes dos arquivos
+%   use / no lugar de \, como em: {cap_intro/introducao} no lugar de {cap_intro\introducao}
+%   . representa o diretorio atual -- {./cap1/capitulo_1}
+
+
+\include{cap_intro/introducao}
+
+\include{cap1/capitulo_1}
+
+\include{cap2/capitulo_2}
+
+% ---
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ---
+% Conclusão
+% ---
+\include{cap_concl/conclusoes}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+%
+% 	abntex2 usa o estilo abntex2cite para formatação
+%	das referências. Leia o capítulo 2 deste documento
+%	para mais informações
+% ----------------------------------------------------------
+\bibliography{bib/referencias,bib/abntex2-modelo-references}
+
+% ----------------------------------------------------------
+% Glossário -- elemento opcional, só inclua se necessário
+%
+%	Nota:	No PPG-ET não é usual colocar um glossário
+%			em teses e dissertações. Se for usar, é preciso
+%			descomentar as linhas apropriadas
+% ----------------------------------------------------------
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+%
+% Os apêndices, se existirem, devem ser incluídos pelo 
+% ambiente \begin{apendicesenv}...\end{apendicesenv}
+%	Nota: apêndices são numerados com letras maiúsculas: A, B, ...
+%
+% ----------------------------------------------------------
+% Para incluir um apêndice, descomente as linhas a seguir
+%
+%\begin{apendicesenv}% Inicia os apêndices
+%
+%	\partapendices% Imprime uma página indicando o início dos apêndices
+%
+%	\include{cap_ap/apendice_A}% inclui o apendice A
+%	\include{cap_ap/apendice_B}% inclui o apendice B e assim por diante
+%
+%\end{apendicesenv}% fim dos apêndices
+
+% ----------------------------------------------------------
+% Anexos
+%
+% Anexos, caso existam, devem ser incluídos através do 
+% ambiente \begin{anexosenv}...\end{anexosenv}
+% 	Nota: anexos são numerados com algarismos arábicos: 1, 2, ...
+%
+% ----------------------------------------------------------
+% Para incluir um ou mais anexos, descomente as linhas a seguir
+%
+%\begin{anexosenv}% Inicia os anexos
+%
+%	\partanexos % Imprime uma página indicando o início dos anexos
+%
+%		\include{cap_anx/anexo_1}% inclui o anexo 1
+%
+%\end{anexosenv}% fim dos anexos
+
+
+\end{document}% fim do arquivo raiz da tese/dissertação
+
+

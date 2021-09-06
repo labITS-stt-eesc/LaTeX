@@ -1,0 +1,455 @@
+% !TEX encoding = ISO-8859-1
+
+% ---
+% Capitulo Genérico
+% ---
+\chapter[Exemplo de capítulo com um título muito extenso...]
+		{Exemplo de capítulo com um título muito extenso em que se explica
+		como usar referências bibliográficas}
+
+Este capítulo, cujo título é propositalmente muito extenso, 
+apresenta mais alguns comandos específicos da classe \abnTeX\ e 
+mostra como incluir referências bibliográficas no texto. O arquivo
+\texttt{bib/referencias.bib} contém exemplos dos tipos de referência
+mais comuns.
+
+% ---
+\section{Divisões do documento: seção}\label{sec-divisoes}
+% ---
+
+\LaTeX\ gera a numeração das diversas seções do documento automaticamente. A
+classe \abnTeX\ herdou do \LaTeX\ os seguintes comandos para 
+dividir o texto em seções, em ordem decrescente de nível:
+	\begin{quotation}
+	\verb|\part| $\hookrightarrow$ \verb|\chapter| 
+	$\hookrightarrow$ \verb|\section| $\hookrightarrow$ \verb|\subsection| 
+	$\hookrightarrow$ \\
+	$\hookrightarrow$ \verb|\subsubsection| $\hookrightarrow$ \verb|\paragraph| 
+	$\hookrightarrow$ \verb|\subparagraph|
+	\end{quotation}
+Esta seção ilustra o uso de divisões de documentos. \LaTeX\ numera
+as seções e subseções até o nível \verb|\subsubsection|. Os níveis
+subsequentes não são numerados.
+
+\subsection{Divisões do documento: subseção}\label{subsectA}
+
+Isto é uma subseção. Num texto bem organizado, não é preciso ir além
+deste nível de seccionamento numerado, pois a numeração já contém 
+três níveis: \ref{subsectA}.
+
+Sed vel dolor a libero dignissim ultrices cursus sed dui. 
+Suspendisse sed auctor mi, ac feugiat elit. Aenean in porta lectus, 
+nec viverra nisl.
+
+
+\subsubsection{Divisões do documento: subsubseção}
+
+O nível mais baixo de seções numeradas que você pode usar, no 
+\LaTeX, é a \emph{subsubseção}.
+
+  Para encher linguiça, mais texto \emph{dummy}.
+  Sed consectetur mauris ipsum, in vehicula lacus viverra vel. 
+  Quisque accumsan nulla neque. Nunc dictum mollis dolor ut 
+  iaculis. Vivamus aliquam erat nec ante eleifend. 
+
+\subsubsection{Divisões do documento: subsubseção}
+
+Isto é outra subsubseção, o nível mais baixo de seccionamento numerado do texto.
+Se você quiser ir além disso, use o comando \verb|\paragraph|.
+
+\paragraph{Subseção de subsubseção}
+
+o comando \verb|\paragraph| não numera a subseção da subsubseção. 
+
+ Para encher linguiça, mais texto \emph{dummy}. Nulla ut nisi 
+ vitae tortor molestie pulvinar. Vestibulum sed vehicula nisi. 
+ Vivamus sit amet sodales tellus, quis sollicitudin orci.
+
+\subsection{Divisões do documento: subseção}\label{sec-exemplo-subsec}
+
+Isto é uma subseção. Para encher linguiça, mais texto \emph{dummy}. 
+Praesent ante mauris, varius blandit pretium eget, blandit ut felis. 
+Proin vestibulum ex ac rutrum mattis. Integer ultrices sagittis 
+fringilla.
+
+\subsubsection{Divisões do documento: subsubseção}
+
+Isto é mais uma subsubseção da \autoref{sec-exemplo-subsec}.
+
+% ---
+\section{Este é um exemplo de nome de seção longo. Ele deve estar
+alinhado à esquerda e a segunda e demais linhas devem iniciar logo abaixo da
+primeira palavra da primeira linha}
+% ---
+
+Isso atende à norma \citeonline[seções de 5.2.2 a 5.2.4]{NBR14724:2011} 
+ e \citeonline[seções de 3.1 a 3.8]{NBR6024:2012}.
+
+
+% ---
+\section{Consulte o manual da classe \texttt{abntex2.cls}}
+% ---
+
+Consulte o manual da classe \abnTeX\  \cite{abntex2classe} para uma
+referência completa das macros e ambientes disponíveis. Além disso, o manual
+possui informações adicionais sobre as normas ABNT observadas pelo \abnTeX.
+ 
+% ---
+\section{Referências bibliográficas}
+% ---
+
+A classe \abnTeX\ usa o pacote \texttt{abntex2cite.sty} para gerar a
+bibliografia e as citações bibliográficas ao longo do texto. São dois
+os comandos que podem ser usados para fazer citações: 
+\verb|\cite{|\emph{rótulo}\verb|}|, para referências implícitas, e 
+\verb|\citeonline{|\emph{rótulo}\verb|}|, para referências explícitas.
+
+Uma referência implícita é quando o(s) nome(s) do(s) autor(s) não 
+faz(em) parte da sentença, como no exemplo a seguir:\\[6pt]
+%\hspace*{1em}%
+	{\parbox[t]{6.7cm}{%
+	\ttfamily\footnotesize\sloppy
+	Valores da aderência \$f\$ variam \\ entre 0,33
+	(trilho totalmente limpo \\ e seco) e 0,10, 
+	quando o trilho está sujo com óleo 
+	\textbackslash{}cite[p.$\sim$82]\{hay82\}.}}
+\hspace{\fill} ...que produz...\hspace{\fill}
+	{\parbox[t]{5.5cm}{%
+	\footnotesize Valores da aderência $f$ variam entre 0,33
+	(trilho totalmente limpo e seco) e 0,10, 
+	quando o trilho está sujo com óleo 
+	\cite[p.~82]{hay82}.}}\\[12pt]
+	
+Referências implícitas são feitas usando-se o comando 
+\verb|\cite{|\emph{rótulo}\verb|}|, em que \emph{rótulo} identifica
+o documento bibliográfico a que se faz referência -- no caso do
+exemplo, \texttt{hay82}. Os exemplos a seguir mostram casos em que
+há mais de um autor:\\[6pt]
+	{\parbox[t]{6cm}{%
+	\ttfamily\footnotesize
+	Uma explicação mais detalhada\\ 
+	pode ser encontrada na\\ literatura 
+	\textbackslash{}cite[p.$\sim$128]\{kop95\}.}}
+\hspace{1em} ...que produz...\hspace{1em}
+	{\parbox[t]{6cm}{%
+	\footnotesize Uma explicação mais detalhada pode
+	ser encontrada na literatura  
+	\cite[p.~128]{kop95}.}}\\[12pt]
+Quando há três autores, o uso do comando 
+\verb|\citeonline{|\emph{rótulo}\verb|}| produz:\\[6pt]
+	{\parbox[t]{5.5cm}{%
+	\ttfamily\footnotesize
+	O fenômeno não ocorre no escuro
+	\textbackslash{}cite\{huey03\}.}}
+\hspace{1em} ...que produz...\hspace{1em}
+	{\parbox[t]{6.5cm}{%
+	\footnotesize
+	O fenômeno não ocorre no escuro 
+	\cite{huey03}}}\\[12pt]
+Quando há mais de três autores, \texttt{abntex2cite.sty} usa 
+\emph{et~al.}:\\[6pt]
+	{\parbox[t]{5.5cm}{%
+	\ttfamily\footnotesize
+	Esse fenômeno só ocorre no escuro
+	\textbackslash{}cite\{huey05\}.}}
+\hspace{1em} ...que produz...\hspace{1em}
+	{\parbox[t]{6.5cm}{%
+	\footnotesize 
+	Esse fenômeno só ocorre no escuro
+	\cite{huey05}.}}\\[12pt]
+
+Referências explícitas são aquelas em que o(s) nome(s) do(s) autor(s)  
+faz(em) parte da sentença. O comando \verb|\citeonline{|\emph{rótulo}\verb|}|
+deve ser usado nesses casos, como mostra o exemplo a seguir:\\[6pt]
+	{\parbox[t]{5.5cm}{%
+	\ttfamily\footnotesize
+	Uma explicação mais detalhada\\ 
+	pode ser encontrada em\\ 
+	\textbackslash{}citeonline[p.$\sim$128]\{kop95\}.}}
+\hspace{1em} ...que produz...\hspace{1em}
+	{\parbox[t]{6.5cm}{%
+	\footnotesize Uma explicação mais detalhada pode
+	ser encontrada em  
+	\citeonline[p.~128]{kop95}.}}\\[12pt]
+Quando há três autores, o uso do comando 
+\verb|\citeonline{|\emph{rótulo}\verb|}| produz:\\[6pt]
+	{\parbox[t]{5.5cm}{%
+	\ttfamily\footnotesize
+	\textbackslash{}citeonline\{huey03\}
+	discutem o fenômeno sob...}}
+\hspace{1em} ...que produz...\hspace{1em}
+	{\parbox[t]{6.5cm}{%
+	\footnotesize 
+	\citeonline{huey03}
+	discutem o fenômeno sob...}}\\[12pt]
+Quando há mais de três autores, o resultado é mostrado no exemplo
+a seguir:\\[6pt]
+	{\parbox[t]{5.5cm}{%
+	\ttfamily\footnotesize
+	\textbackslash{}citeonline\{huey05\}
+	é a\\ referência básica do assunto.}}
+\hspace{1em} ...que produz...\hspace{1em}
+	{\parbox[t]{6.5cm}{%
+	\footnotesize 
+	\citeonline{huey05}
+	é a referência básica do assunto.}}\\[12pt]
+
+\section{A base de dados bibliográficos}
+
+\textsc{Bib}\TeX\ é um programa associado ao \LaTeX\ que usa o pacote \texttt{abntex2cite.sty} e uma base de dados bibliográficos para
+construir a bibliografia do documento. A base (ou bases) de dados usada para 
+montar a lista de referências bibliográficas é indicada no documento
+raiz pelo comando 
+\texttt{\textbackslash{}bibliography\{\textrm{\emph{arq\_1,...,arq\_n}}\}},
+em que \emph{arq\_i} é um arquivo com extensão \texttt{.bib}, que contém
+as dados usados para a montagem das referências bibliográficas. 
+
+Uma entrada do arquivo \emph{arq\_i}\texttt{.bib} tem o seguinte formato
+geral:\\
+\hspace*{3em}\verb|@tipo{rótulo,|\\
+	\hspace*{5em}\verb|dados_obrigatórios [,|\\ 
+	\hspace*{5em}\verb|dados_opcionais] }| \\
+em que \verb|@tipo| define o tipo da referência 
+   			bibliográfica (artigo, livro, tese etc.); 
+	\texttt{rótulo} é uma string usada para 
+			identificar a referência (como \texttt{setti98a});
+	\texttt{dados\_obrigatórios} são os campos de dados que 
+   			devem ser fornecidos para possibilitar a construção 
+   			da referência pelo \textsc{Bib}\TeX; e
+	\texttt{dados\_opcionais} são dados que complementam
+     		os obrigatórios. 
+Os tipos de referência e os dados, obrigatórios
+e opcionais, são descritos no item~\ref{bibtex_entries}, a seguir.
+
+É boa política preencher todos os campos de dados para os quais você
+dispõe de informações. Você poderá reusar um arquivo \texttt{.bib} em
+qualquer arquivo \texttt{.tex} que você fizer e alguns pacotes 
+para montagem de bibliografias podem exigir certos dados além do
+mínimo exigido pelo \textsc{Bib}\TeX. Por exemplo,  \texttt{abntex2cite.sty}
+irá colocar \emph{[S.l.]} (sem local) em referências nas quais o campo 
+\texttt{address} não existir (dependendo do tipo de referência), 
+apesar desse campo ser opcional para a maioria dos tipos de referência
+previstos no \textsc{Bib}\TeX.
+
+
+O arquivo 
+\texttt{bib/referencias.bib} contém exemplos de elementos bibliográficos
+numa base de dados do \textsc{Bib}\TeX.{} Os tipos de referência previstos
+pelo \textsc{Bib}\TeX\ incluem:
+	\begin{alineas}
+		\item livro (\verb|@book|),  \cite{kop95};
+		\item capítulo ou trecho de livro (\verb|@inbook|);
+		\item artigo em periódico (\verb|@article|) \cite{huey03};
+		\item trabalho publicado em anais de congresso 
+		(\verb|@inproceedings|);
+		\item anais (completos) de congresso (\verb|@proceedings|);
+		\item manual (\verb|@manual|) \cite{epslatex06};
+		\item tese de doutorado (\verb|@phdthesis|);
+		\item dissertação de mestrado (\verb|@mastersthesis|);
+		\item relatório técnico (\verb|@techreport|); e
+		\item documento que não pode ser classificado em
+		nenhum outro tipo (\verb|@misc|).
+	\end{alineas}
+Além dos listados, que são os mais comuns numa tese ou
+dissertação, há muitos outros elementos especificados
+no manual do \texttt{abntex2cite.sty}, disponível neste 
+\href{http://ctan.math.washington.edu/tex-archive/macros/latex/contrib/abntex2/doc/abntex2cite-alf.pdf}{\fbox{\texttt{link}}}.
+
+O Google Scholar permite exportar referências em formato \textsc{Bib}\TeX,
+o que pode facilitar um pouco sua vida, se o tipo e o formato estiverem
+corretos (o que nem sempre acontece, na minha experiência).
+
+\subsection{Tipos de referência e dados necessários}
+\label{bibtex_entries}
+
+%%----
+% Definição de um novo comando, \campo para evitar escrever
+%	\hspace*{1em}\texttt{_arg_}: em todos os campos
+\newcommand{\campo}[1]{\hspace*{1em}\texttt{#1}:}
+%%----
+% Define comando \ttz{...} que equivale a \texttt{...}
+\newcommand{\ttz}[1]{\texttt{#1}}
+
+A lista a seguir define os tipos de referências previstos no 
+\textsc{Bib}\TeX\ e, para cada um deles, quais são os dados 
+obrigatórios e os opcionais, explicando como cada campo
+deve ser preenchido. Os tipos podem ser escritos em minúsculas
+\verb|@tipo| ou maiúsculas \verb|@TIPO|, sem causar problemas. 
+Para maiores detalhes sobre os tipos de referências e os campos
+de cada tipo consulte este 
+\href{http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php}
+{\fbox{\texttt{link}}}.
+\begin{alineas}
+
+	\item \verb|@BOOK| -- se a referência for um livro publicado por uma
+		editora (use \verb|@inbook| para capítulo ou trecho de livro) \\
+		\emph{Campos obrigatórios:}\\
+ 			\campo{author [ou] editor} nome do autor ou do editor;\\
+ 			\campo{title} título do livro;\\
+ 			\campo{publisher} nome da editora que publicou o livro; e \\
+ 			\campo{year} ano da publicação.\\
+		\emph{Campos opcionais}:\\
+			\campo{volume} número do volume, se houver mais de um; \\
+			\campo{series} número do livro, se fizer parte de uma série;\\
+ 			\campo{address} cidade de publicação (evite omitir este campo);\\
+ 			\campo{edition} número da edição, se não for a única;\\
+ 			\campo{month} mês de publicação;\\
+ 			\campo{note} qualquer observação desejada; \\
+ 			\campo{key} usado para ordenação alfabética e citação, se
+ 				\texttt{author} e \texttt{editor} não existem.\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+			\hspace*{1em}\citeonline{hay82} e \citeonline{kop95} ou 
+			\cite{hay82,kop95,epe13,epe13b}\\
+		\emph{Observações:} Não confundir \texttt{key}
+ 				com \texttt{rótulo}, que é usado para identificar a 
+ 				referência para o \textsc{Bib}\TeX. \texttt{key} não
+ 				é usado por \texttt{abntex2cite.sty}, por causa da 
+ 				norma da ABNT. Para livros sem autor e editor, eu sugiro 
+ 				verificar os dados de \citeonline{epe13}, para evitar
+ 				algo assim: \citeonline{epe13b} -- os dois são o
+ 				mesmo livro.
+ 				
+	\item \verb|@INBOOK| -- capítulo ou parte de um livro (veja 
+		\verb|@incollection| para outro caso de parte de livro) \\
+		\emph{Campos obrigatórios:}\\
+ 			\campo{chapter [ou] pages} número do capítulo ou das páginas 
+ 			  citadas;\\
+ 			\texttt{author} ou \texttt[editor]; \texttt{title}; 
+ 			\texttt{publisher}; e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			\texttt{volume}; \texttt{series}; \texttt{address};
+			\texttt{edition};\texttt{month}; \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+			\hspace*{1em}\citeonline{kop95c3} ou 
+			\cite{kop95c3,epe13a} 
+	\emph{Observações:} O resultado fica ruim nos dois casos.
+			Não dá para usar com o \texttt{abntex2cite.sty}.
+		
+	\item \verb|@INCOLLECTION| -- capítulo ou parte de um livro com
+		seu próprio título e autor \\
+		\emph{Campos obrigatórios:}\\
+ 			\campo{booktitle}  título do livro;\\
+ 			\campo{title} título do capítulo; \\
+ 			\campo{author} autor do capítulo; \\
+ 			\texttt{publisher}; e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			\texttt{editor}; \texttt{volume [ou] número}; 
+			\texttt{series}; \texttt{address};
+			\texttt{edition};\texttt{month}; \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+			\hspace*{1em}\citeonline{cop05c2,cope2005} 
+			\cite{cop05c2,cope2005}
+		\emph{Observações:} O resultado fica ruim nos dois casos, 
+			coloca-se o título do livro no lugar do título do 
+			do capítulo. Não dá para usar com o \texttt{abntex2cite.sty}. 
+			Veja como colocar sobrenomes compostos com \emph{Junior}, 
+			\emph{Neto} e \emph{Filho} para que saiam corretamente
+			no texto e na bibliografia. 
+
+		\item \verb|@ARTICLE| para um artigo publicado num periódico
+			científico ou numa revista\\
+		\emph{Campos obrigatórios:}\\
+ 			\campo{journal}  nome do periódico;\\
+ 			\hspace*{1em}\ttz{title}; \ttz{author}; e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			\hspace*{1em}\texttt{volume}; \texttt{number}; 
+			\texttt{pages}; \texttt{month}; e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+			\cite{huey03}
+			
+	\item \verb|@INPROCEEDINGS| trabalho publicado nos anais de
+			um congresso científico\\
+		\emph{Campos obrigatórios:}\\
+ 			\campo{booktitle}  título dos anais do congresso;\\
+ 			\hspace*{1em}\ttz{title}; \ttz{author}; e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}\ttz{editor}; \ttz{volume}; \ttz{number}; \ttz{series}; 
+			 \ttz{address}; 
+			\texttt{pages}; \texttt{month}; \ttz{organization};\\
+			\hspace*{1em}\ttz{publisher} e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+			\cite{mil2009}, \citeonline{mil2009} e \cite{aut:06} \\
+		\emph{Observações:} Os sobrenomes ``de Mileto'' e ``von Samos''
+		são tratados corretamente se ``de'', ``von'' ou ``da'' estiverem
+		em minúsculas. Use o campo \ttz{note} para incluir
+		coisas como ``(CD-ROM)'' ou a url dos anais do congresso. 
+		\citeonline{aut:06} é um exemplo de citação cruzada
+		(veja \ttz{aut:06} e \ttz{conf:06} no arquivo \ttz{.bib}). 
+			
+			
+	\item \verb|@PROCEEDINGS| para citar os anais de um congresso
+			científico (o livro todo)\\
+		\emph{Campos obrigatórios:}\\
+ 			\hspace*{1em}\ttz{title} e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}\ttz{editor}; \ttz{volume}; \ttz{number}; 
+			 \ttz{series}; \ttz{address}; \texttt{month}; \ttz{organization};\\
+			\hspace*{1em}\ttz{publisher} e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+			\citeonline{conf:06} e \cite{conf:06} \\
+			
+	\item \verb|@MANUAL| normalmente, manual de um software (veja
+		\ttz{techreport} \\
+		\emph{Campos obrigatórios:}\\
+ 			\hspace*{1em}\ttz{title}.\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}\ttz{author};   \ttz{organization};
+			 \ttz{edition}; \ttz{address}; \texttt{month};
+			\ttz{year} e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+				\citeonline{epslatex06}, \cite{epslatex06}
+
+	\item \verb|@TECHREPORT| um relatório técnico, publicado por
+		uma organização, com ou sem autor, às vezes numerado numa
+		série \\
+		\emph{Campos obrigatórios:}\\
+ 			\hspace*{1em}\ttz{title}; \ttz{author}; \ttz{institution}
+ 			e \ttz{year}\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}\ttz{type};   \ttz{number};
+			 \ttz{address}; \texttt{month};
+			e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+				\citeonline{gomez03} (\ttz{gomez03}), \cite{dnit06}
+				(\ttz{dnit06})
+		\emph{Observações:} Veja que não aparece nem o tipo de relatório
+		nem seu número -- mais um problema do \ttz{abntex2cite.sty}. Em 
+		\ttz{gomez03} não aparece o nome da instituição. Melhor evitar
+		este tipo no \ttz{abntex2cite.sty}.	Tente \ttz{misc}.		
+								
+	\item \verb|@PHDTHESIS| uma tese de doutorado \\
+		\emph{Campos obrigatórios:}\\
+ 			\hspace*{1em}\ttz{author}; \ttz{title}; \ttz{school}; e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}  \ttz{type};
+			 \ttz{address}; \texttt{month};
+			 e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+				\citeonline{cunha13}, \cite{cunha13}
+	
+	\item \verb|@MASTERSTHESIS| uma dissertação de mestrado \\
+		\emph{Campos obrigatórios:}\\
+ 			\hspace*{1em}\ttz{author}; \ttz{title}; \ttz{school}; e \ttz{year}.\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}  \ttz{type};
+			 \ttz{address}; \texttt{month};
+			 e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+				\citeonline{cunha09}, \cite{cunha09}
+					
+	\item \verb|@misc| um documento genérico, que pode resolver
+		alguns dos seus problemas \\
+		\emph{Campos obrigatórios:}\\
+ 			\hspace*{1em}nenhum\\
+		\emph{Campos opcionais}:\\
+			 \hspace*{1em}\ttz{author}; \ttz{title}; 
+			 \ttz{howpublished}; \texttt{month}; \ttz{year};
+			 e \texttt{note}\\
+		\emph{Exemplos em \texttt{bib/referencias.bib}:} \\
+				\citeonline{oli87} e \cite{oli87} e, para um documento na
+				web: \cite{epsl}. Teste para ver se fica certo 
+				\cite{epsl, epslatex06}.
+			
+\end{alineas}
+
+
